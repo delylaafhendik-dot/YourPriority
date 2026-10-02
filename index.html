@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Priority - Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <div id="login-section" class="container">
+        <div class="login-box">
+            <h1>Your Priority</h1>
+            <p>Silakan login untuk mulai jual beli</p>
+            <input type="text" id="username" placeholder="Masukkan Nama Anda" required>
+            <button onclick="handleLogin()">Masuk ke Toko</button>
+        </div>
+    </div>
+
+    <!-- HALAMAN TOKO (Disembunyikan sebelum login) -->
+    <div id="store-section" class="hidden">
+        <header>
+            <h1>Your Priority</h1>
+            <p>Selamat datang, <span id="user-display"></span>!</p>
+            <button onclick="logout()" class="btn-logout">Logout</button>
+        </header>
+
+        <main>
+            <section class="actions">
+                <h2>Marketplace Fashion</h2>
+                <button class="btn-sell" onclick="alert('Fitur Jual Barang akan segera hadir! (Membutuhkan Database)')">+ Jual Barang Anda</button>
+            </section>
+
+            <section class="products">
+                <!-- Produk 1 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80" alt="Baju">
+                    <h3>Kaos Polos Premium</h3>
+                    <p>Rp 100.000</p>
+                    <button class="btn-buy" onclick="beli('Kaos Polos Premium')">Beli</button>
+                </div>
+                <!-- Produk 2 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80" alt="Sepatu">
+                    <h3>Sepatu Sneakers Retro</h3>
+                    <p>Rp 450.000</p>
+                    <button class="btn-buy" onclick="beli('Sepatu Sneakers Retro')">Beli</button>
+                </div>
+                <!-- Produk 3 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1591369822096-114cb3094890?auto=format&fit=crop&w=300&q=80" alt="Jaket">
+                    <h3>Jaket Denim</h3>
+                    <p>Rp 250.000</p>
+                    <button class="btn-buy" onclick="beli('Jaket Denim')">Beli</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
